@@ -1,0 +1,12 @@
+﻿@page
+@model LibraryModel
+@{
+}
+@foreach(var title in Model.BooksTitles)
+{
+	<div>
+		<a asp-page="/Details/Index" asp-route-bookIndex=" @Model.BooksTitles.IndexOf(title)"><p>"@title"</p></a>
+	</div>
+
+	<hr />
+}

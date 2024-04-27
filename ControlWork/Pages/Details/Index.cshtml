@@ -1,0 +1,23 @@
+﻿@page "book/{bookIndex}"
+@model ControlWork.Pages.Details.IndexModel
+@{
+}
+
+	<div>
+	<h3>
+		Title:
+	</h3> <h4>"@Model.Book.Title"</h4>
+
+	<h3>
+		Genre:
+	</h3><h4 > @Model.Book.Genre</h4>
+	<h3>
+		Author:
+	</h3><h4> @Model.Book.Author</h4>
+	<h3>PublicationDate:</h3> <h4>@Model.Book.PublicationDate.ToString("Y")</h4>
+	</div>
+	<hr />
+	<div>
+	<a asp-page="/Details/Index" asp-route-bookIndex="@Model.MovedPrev()">Prev</a>
+	<a asp-page="/Details/Index" asp-route-bookIndex="@Model.MovedNext()">Next</a>	
+	</div>
